@@ -4,7 +4,7 @@ function Profile() {
   return (
     <div style={{
         background:'linear-gradient(180deg, #022F43 24.27%, #46737F 179.61%)'
-    }} className='flex gap-12 flex-col items-center md:flex-row w-full text-white rounded-lg p-6'>
+    }} className='flex gap-12 flex-col shadow-xl items-center md:flex-row w-full text-white rounded-lg p-6'>
         <div className='h-32  w-32 rounded-full bg-gray-400'>
 
         </div>
