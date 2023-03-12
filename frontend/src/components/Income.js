@@ -1,12 +1,15 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect } from 'react'
 
 function Income() {
+
+
   return (
     <div>
         <div className='flex justify-center md:justify-end text-white text-3xl font-semibold'>
 Total : $1234
         </div>
-        <div className='flex flex-col items-center justify-center overflow-y-scroll'>
+        <div className='flex flex-col mt-6 items-center justify-center overflow-y-scroll'>
 
         <Card/>
         <Card/>

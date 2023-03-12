@@ -1,9 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Profile from '../components/Profile'
 import Income from '../components/Income'
 import ExpenseChart from '../components/ExpenseChart'
 import {BiPlus} from 'react-icons/bi'
+import axios from 'axios'
 function Dasboard() {
+  const url = "https://devcraft-api.onrender.com/api/v1/expenses"
+
+const getDetails = async ()=>{
+    const res = await axios.get(url,{email:"test@gmail.com"})
+    console.log(res.data)
+}
+useEffect(() => {
+  getDetails()
+}, [])
   const [selec,setselec] = useState(false)
   const [open,setOpen] = useState(false)
   const monthData = [
@@ -54,7 +64,7 @@ backgroundRepeat:'no-repeat',
           <div className={`${selec ? 'text-white bg-[#FFCD4A] border-[1px] p-4 border-[#FFCD4A]' : 'text-[#FFCD4A]  p-4 border-[1px] border-white'} px-8 rounded-l-xl text-2xl font-semibold`}>Income</div>
           <div className={`${!selec ? 'text-white bg-[#FFCD4A] border-[1px] p-4  border-[#FFCD4A]' : 'text-[#FFCD4A]  p-4 border-[1px] border-white'} px-8 rounded-r-xl text-2xl font-semibold`}>Expenses</div>
         </div>
-        <h3 className=''> {} </h3>
+        <h3 className='text-center text-[#FFCD4A] text-2xl font-bold'> {!selec ? 'Expense' : 'Income'} </h3>
       <Income/>
       </div>
       </div>
