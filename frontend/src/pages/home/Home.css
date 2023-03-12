@@ -62,9 +62,7 @@
     font-weight: 700;
     font-size: 4rem;
     line-height: 68px;
-    color: #FFCD4A;
-    -webkit-text-stroke-width: 0.7px;
-    -webkit-text-stroke-color: black;
+    color: #ffffff;
 }
 
 .home-top-left p {
@@ -92,33 +90,6 @@
 }
 
 /* account details begins */
-
-.home-account-details {
-    background: url(../../images/gradient.png);
-    height: 15rem;
-    width: 40rem;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 1rem;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-    margin-right: 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.account-details-row {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    font-family: 'Open Sans';
-    color: #FFFFFF;
-}
-
 /* account details ends */
 
 /* middle goals starts */
@@ -130,6 +101,30 @@
     justify-content: space-around;
     padding: 1rem;
     align-items: center;
+}
+.home-mid-right {
+    align-items: left;
+    justify-content: center;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    font-family: 'Poppins';
+    gap: 1rem;
+}
+.home-goals{
+    font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2rem;
+        color: #022F43;
+}
+.home-mid-right::before {
+    content: "";
+    width: 1rem;
+    background-color: #FFCD4A;
+    position: absolute;
+    transform: translateX(-10rem);
+    height: 20rem;
 }
 
 .home-mid-left {
@@ -150,7 +145,7 @@
 
 .home-mid-left img {
     float: left;
-    margin-left: -30rem;
+    margin-left: -20rem;
 }
 
 /* middle goals ends */
