@@ -37,7 +37,7 @@ const Home = () => {
         <div className="home-top-data">
           <div className="home-top-detail">
             <div className="home-top-left">
-              <h2 className="home-motto">SIMPLE WAY TO MANAGE YOUR MONEY</h2>
+              <h2 className="home-motto">Mastering Your Money</h2>
               <p className="home-motto-desc">
                 In addition to straightforward expense management, comprehensive financial management in right way{" "}
               </p>
