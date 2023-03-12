@@ -3,6 +3,7 @@ const app = express();
 const ConnectDB = require('./db/connect');
 require('dotenv').config();
 const AuthRouter = require('./routers/Auth');
+const ExpenseRouter = require('./routers/Expense');
 
 
 
@@ -16,6 +17,7 @@ app.get('/api/v1/test', async (req, res) => {
 });
 
 app.use('/api/v1/auth', AuthRouter);
+app.use('/api/v1/expenses', ExpenseRouter);
 
 const start = async () => {
     try {
