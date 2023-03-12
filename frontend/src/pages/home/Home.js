@@ -14,14 +14,6 @@ import reward from "../../images/home-reward.png";
 import goals from "../../images/home-goals.png";
 import "@lottiefiles/lottie-player";
 const Home = () => {
-  const [value, setValue] = useState(false);
-//   const [max, setMax] = useState({
-//     id: "",
-//     cost: 0,
-//   });
-  const buttonHandler = () => {
-    setValue(true);
-  };
   const [userData] = useState({
     labels: UserData.map((data) => data.id),
     datasets: [
@@ -54,14 +46,8 @@ const Home = () => {
             <div className="home-top-left">
               <h2 className="home-motto">SIMPLE WAY TO MANAGE YOUR MONEY</h2>
               <p className="home-motto-desc">
-                In addition to simple expense management, the complete finance
-                management with a gaming experience{" "}
+                In addition to straightforward expense management, comprehensive financial management in right way{" "}
               </p>
-              {value === false && (
-                <button className="home-top-button" onClick={buttonHandler}>
-                  Start A New Journey
-                </button>
-              )}
             </div>
             <div className="home-top-right">
               {/* <img src={Hometopimg} alt="HomePage top"/> */}
@@ -77,7 +63,6 @@ const Home = () => {
               ></lottie-player>
             </div>
           </div>
-          {value === true && (
             <div className="home-account-details">
               <div className="account-details-row">
                 <div className="account-details-left">
@@ -102,14 +87,12 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          )}
         </div>
       </div>
 
       {/* home top part ends */}
       {/* home goals part begins */}
 
-      {value === true && (
         <div className="home-mid">
           <div className="home-mid-left">
             <img src={coin} alt="coin" />
@@ -120,17 +103,14 @@ const Home = () => {
             <div className="home-goals">{cardElements}</div>
           </div>
         </div>
-      )}
       {/* home goals ends */}
       {/* expense chart begins */}
-      {value === true && (
-        <div className="expense-chart">
+        {/* <div className="expense-chart">
           <div className="piechart">
             <h1 className="expense-chart-title"> Expense Report</h1>
             <ExpenseChart chartData={userData} />
           </div>
-        </div>
-      )}
+        </div> */}
       {/* expense chart ends */}
       {/* bottom home starts */}
       <div className="about">
