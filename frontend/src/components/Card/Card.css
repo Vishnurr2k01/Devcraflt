@@ -1,0 +1,42 @@
+.wish-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: #FFCD4A;
+    height: 10rem;
+    width: 20rem;
+        font-family: 'Poppins';
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+}
+.wish-card::before {
+    content: "";
+    width: 1rem;
+    background-color:#FFCD4A;
+    position: absolute;
+    transform: translateX(-20rem);
+    height: 20rem;
+}
+.wish-card img{
+    height: 10rem;
+    width: auto;
+}
+.wish-card-left {
+    display: flex;
+    flex-direction: column;
+    line-height: 1rem;
+    gap: 2rem;
+}
+.wish-card-left p{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.wish-card-left h2{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.7rem;
+}
+.wish-card-left h3{
+    color: rgb(97, 97, 97);
+}
