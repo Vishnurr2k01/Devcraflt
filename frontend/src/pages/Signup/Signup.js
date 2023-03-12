@@ -78,7 +78,7 @@ const navigate = useNavigate();
     //         <button type="submit" onClick={handleSubmit}>Sign up</button>
     //     </form>
     // </div>
-    <div className='container'>
+    <div className='container2'>
         <div class="login-box">
         <p>Sign Up</p>
         <form>

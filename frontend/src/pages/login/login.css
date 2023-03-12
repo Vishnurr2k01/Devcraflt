@@ -182,7 +182,7 @@
     border-radius: 5px;
 }
 
-.container {
+.container2 {
     background: linear-gradient(83deg, #ffb312, #ffdc9c);
     background-size: 120% 120%;
     animation: gradient-animation 2s ease infinite;
