@@ -1,20 +1,32 @@
 import React, { useState } from 'react'
 import Profile from '../components/Profile'
 import Income from '../components/Income'
-import ExpenseChart from '../components/ExpenseChart'
+import ExpenseChart from '../components/ExpenseChart';
 function Dasboard() {
-  const [selec,setselec] = useState(false)
- const Data = [
+  const [selec,setselec] = useState(false);
+  const monthData = [
     {
-      id:'Income',
-     cost:50000,  
+      id:'INCOME',
+
+      cost:50000,  
     },
     {
-      id:'Expense',
+      id:'EXPENSE',
       cost:24000,  
     },
-    
 ]
+   const [userData] = useState({
+    labels: monthData.map((data) => data.id),
+    datasets: [
+      {
+        label: "total cost",
+        data: monthData.map((data) => data.cost),
+        backgroundColor: ["#2a71d0", "#ecf0f1", "#50AF95", "#f3ba2f"],
+        borderColor: "black",
+        borderWidth: 2,
+      },
+    ],
+  });
   return (
     <div style={{
 background:`url('/bg.png')`,
@@ -44,12 +56,7 @@ backgroundRepeat:'no-repeat',
       </div>
       <div className=' w-full md:w-1/3 bg-[#022F43] flex flex-col items-center justify-center h-fit py-12'>
       <h3 className='mb-12 text-3xl text-white font-semibold'>Monthly Expense Tracker</h3>
-      <div className='w-80 h-80 rounded-full bg-gray-200  '>
-
-
-
-      </div>
-{/* <ExpenseChart chartData={Data}/> */}
+<ExpenseChart chartData={userData} />
       </div>
     </div>
   )
