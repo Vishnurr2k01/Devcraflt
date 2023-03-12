@@ -59,7 +59,7 @@ backgroundRepeat:'no-repeat',
       <div style={{
         border:'1px solid rgba(255, 255, 255, 0.5)'
 
-      }} className='bg-[#022F43] p-12 mt-12 rounded-xl h-[60vh] shadow-xl'>
+      }} className='bg-[#022F43] p-12 mt-12 rounded-xl h-[60vh] shadow-xl overflow-y-scroll overflow-x-hidden'>
         <div className='flex  text-center justify-center mb-12' onClick={()=>setselec(!selec)}>
           <div className={`${selec ? 'text-white bg-[#FFCD4A] border-[1px] p-4 border-[#FFCD4A]' : 'text-[#FFCD4A]  p-4 border-[1px] border-white'} px-8 rounded-l-xl text-2xl font-semibold`}>Income</div>
           <div className={`${!selec ? 'text-white bg-[#FFCD4A] border-[1px] p-4  border-[#FFCD4A]' : 'text-[#FFCD4A]  p-4 border-[1px] border-white'} px-8 rounded-r-xl text-2xl font-semibold`}>Expenses</div>
