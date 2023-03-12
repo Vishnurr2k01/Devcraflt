@@ -4,7 +4,6 @@ import coin from "../../images/coins.png";
 import Profile from "../../images/logo-demo.png";
 import "./Home.css";
 import { Data } from "../../Data";
-import Hometopimg from "../../images/home-top.png";
 import { useState } from "react";
 import Card from "../../components/Card/Card";
 import ExpenseChart from "../../components/ExpenseChart";
@@ -13,6 +12,8 @@ import footerlogo from "../../images/footerlogo.png";
 import reward from "../../images/home-reward.png";
 import goals from "../../images/home-goals.png";
 import "@lottiefiles/lottie-player";
+import AOS from "aos"
+AOS.init();
 const Home = () => {
   const [userData] = useState({
     labels: UserData.map((data) => data.id),
@@ -53,12 +54,11 @@ const Home = () => {
               {/* <img src={Hometopimg} alt="HomePage top"/> */}
               {/* <video src="https://assets6.lottiefiles.com/packages/lf20_zu3z8n5o.json"></video> */}
               <lottie-player
-                src="https://assets6.lottiefiles.com/packages/lf20_zu3z8n5o.json"
+                src="https://lottie.host/dca4307f-beea-4302-87fb-87530476a4ae/Kk8ZTyZkLh.json"
                 background="transparent"
                 speed="1"
-                style={{width: "300px", height: "300px"}}
+                style={{ width: "600px", height: "600px" }}
                 loop
-                controls
                 autoplay
               ></lottie-player>
             </div>
@@ -113,7 +113,7 @@ const Home = () => {
         </div> */}
       {/* expense chart ends */}
       {/* bottom home starts */}
-      <div className="about">
+      <div className="about" data-aos="fade-right">
         <div className="about-row">
           <img src={reward} alt="reward" />
           <div className="about-desc">
