@@ -3,13 +3,11 @@ import Logo from "../../images/logo.png";
 import coin from "../../images/coins.png";
 import Profile from "../../images/logo-demo.png";
 import "./Home.css";
-import { Data } from "../../Data";
 import { useState } from "react";
-import Card from "../../components/Card/Card";
 import ExpenseChart from "../../components/ExpenseChart";
 import { UserData } from "../../ChartData";
 import footerlogo from "../../images/footerlogo.png";
-import reward from "../../images/home-reward.png";
+import tax from "../../images/home-tax.png";
 import goals from "../../images/home-goals.png";
 import "@lottiefiles/lottie-player";
 import AOS from "aos"
@@ -26,12 +24,6 @@ const Home = () => {
         borderWidth: 2,
       },
     ],
-  });
-
-  const cardElements = Data.map((goal) => {
-    return (
-      <Card title={goal.title} amount={goal.amount} saving={goal.saving} />
-    );
   });
   return (
     <div>
@@ -63,30 +55,7 @@ const Home = () => {
               ></lottie-player>
             </div>
           </div>
-            <div className="home-account-details">
-              <div className="account-details-row">
-                <div className="account-details-left">
-                  <p>BALANCE</p>
-                  <h2>₹25000</h2>
-                </div>
-                <div className="ccount-details-right">
-                  <p>MARCH</p>
-                </div>
-              </div>
-              <div className="account-details-row">
-                <h1>DAILY LIMIT : ₹833 rs</h1>
-              </div>
-              <div className="account-details-row">
-                <div className="account-details-left">
-                  <p>INCOME</p>
-                  <h2>₹50000</h2>
-                </div>
-                <div className="ccount-details-right">
-                  <p>EXPENSE</p>
-                  <h2>₹25000</h2>
-                </div>
-              </div>
-            </div>
+            <lottie-player src="https://lottie.host/e18325bd-d4af-4f98-9a40-2ec4b418f2f6/Ojq7zq9uKl.json" background="transparent" speed="1" style={{width: "900px", height: "500px"}} loop autoplay></lottie-player>
         </div>
       </div>
 
@@ -96,37 +65,38 @@ const Home = () => {
         <div className="home-mid">
           <div className="home-mid-left">
             <img src={coin} alt="coin" />
-            <h1>GOALS</h1>
+            <h1>EXPENSE <br/>TRACKER</h1>
           </div>
           <div className="home-mid-right">
-            {" "}
-            <div className="home-goals">{cardElements}</div>
+            <div className="home-goals">Monitoring Spending</div>
+            <div className="home-goals">Budgeting</div>
+            <div className="home-goals">Identifying Areas of Overspending</div>
+            <div className="home-goals">Saving Money</div>
           </div>
         </div>
       {/* home goals ends */}
       {/* expense chart begins */}
-        {/* <div className="expense-chart">
+        <div className="expense-chart">
           <div className="piechart">
             <h1 className="expense-chart-title"> Expense Report</h1>
             <ExpenseChart chartData={userData} />
           </div>
-        </div> */}
+        </div>
       {/* expense chart ends */}
       {/* bottom home starts */}
       <div className="about" data-aos="fade-right">
         <div className="about-row">
-          <img src={reward} alt="reward" />
+          <img src={tax} alt="reward" />
           <div className="about-desc">
-            <h1>Unlock Your Rewards Now!</h1>
-            <h3>Complete your monthly goals and get exciting rewards .</h3>
+            <h1>Tax Purposes</h1>
+            <h3>Determine deductible expenses and can simplify the tax preparation process.</h3>
           </div>
         </div>
         <div className="about-row">
           <div className="about-desc">
-            <h1>Wish it, Plan it , Do it</h1>
+            <h1>Financial Planning</h1>
             <h3>
-              Employ our assistance to save money while accomplishing your
-              goals.
+              Employ our assistance to plan for future financial goals
             </h3>
           </div>
           <img src={goals} alt="goals" />
